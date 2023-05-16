@@ -1,0 +1,30 @@
+
+{% extends 'base.html' %}
+{%  block content %}
+<form method="post" class="row g-3">
+  {% csrf_token %}
+    <div class="col-md-6">
+      <label for="inputName4" class="form-label">Name</label>
+      <input name="name" type="name" class="form-control" id="inputName4">
+    </div>
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Email</label>
+      <input name="email"  type="email" class="form-control" id="inputEmail4">
+    </div>
+
+    <div class="col-md-6">
+        <label for="inputSubject" class="form-label">Subject</label>
+        <input name="subject"  type="text" class="form-control" id="inputSubject">
+      </div>
+
+    <div class="col-12">
+      <label for="inputMassage" class="form-label">Massage</label>
+      <textarea name="massage" rows="5" cols="80" id="Subject" placeholder="your Massage">
+    </textarea>
+    </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Keep in Touch</button>
+    </div>
+  </form>
+{% endblock %}
